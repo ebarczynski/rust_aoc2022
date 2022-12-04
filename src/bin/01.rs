@@ -11,10 +11,7 @@ pub fn part_one(input: &str) -> Option<u64> {
 
     // println!("{:?}", chunks);
 
-    let answer: _ = chunks
-        .iter()
-        .map(|x| x.iter().fold(0, |acc, x| acc + x))
-        .max();
+    let answer: _ = chunks.iter().map(|x| x.iter().sum()).max();
     answer
 }
 
@@ -29,7 +26,7 @@ pub fn part_two(input: &str) -> Option<u64> {
 
     let mut sorted: _ = chunks
         .iter()
-        .map(|x| x.iter().fold(0, |acc, x| acc + x))
+        .map(|x| x.iter().sum())
         .collect::<Vec<u64>>()
         .into_iter()
         .sorted();

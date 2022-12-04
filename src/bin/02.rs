@@ -16,7 +16,7 @@ pub fn part_one(input: &str) -> Option<i32> {
             "C Z" => 6,
             &_ => todo!(),
         })
-        .fold(0, |acc, x| acc + x);
+        .sum();
 
     // println!("{:?}", itermediate);
 
@@ -38,7 +38,7 @@ pub fn part_two(input: &str) -> Option<i32> {
             "C Z" => 6 + 1,
             &_ => todo!(),
         })
-        .fold(0, |acc, x| acc + x);
+        .sum();
     println!("{:?}", itermediate);
 
     Some(itermediate)
