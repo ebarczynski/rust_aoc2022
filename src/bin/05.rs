@@ -28,7 +28,7 @@ pub fn part_one(input: &str) -> Option<u32> {
                 .flat_map(|s| {
                     let count = s.len() / 4;
                     let vec: Vec<&str> = vec!["0"; count];
-                    if vec.len() >= 1 {
+                    if !vec.is_empty() {
                         vec
                     } else {
                         vec![s]

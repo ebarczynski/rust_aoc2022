@@ -30,7 +30,7 @@ pub fn part_one(input: &str) -> Option<u32> {
     Some(
         sizes_map
             .into_values()
-            .filter(|&size| size <= 100000 as u32)
+            .filter(|&size| size <= 100000_u32)
             .sum(),
     )
 }
